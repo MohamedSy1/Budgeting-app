@@ -1,8 +1,7 @@
-# React + Vite
+# Budgeting App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple budget management application. It tracks inflow and outflow, shows remaining budget, and interesting reports with charts. As such, it offers more features than the usual Todo App.
 
-Currently, two official plugins are available:
+Budgeting app is a showcase project that demonstrates important decisions in architecture and development of a modern React application.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Feel free to use it as a reference app or a starter kit.
