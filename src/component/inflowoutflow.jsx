@@ -15,7 +15,7 @@ const InflowOutflow = () => {
     const totalInflow = () => {
         let sum = 0
         entries.forEach((entrie) => {
-            if (entrie.income) {
+            if (entrie.category === "Income") {
                 sum += Number(entrie.value)
             }
         })
@@ -25,17 +25,20 @@ const InflowOutflow = () => {
     const totalOutflow = () => {
         let sum = 0 
         entries.forEach((entrie) => {
-            if (!(entrie.income)) {
-                sum += Number(entrie.value)
+            if (entrie.category !== "Income") {
+                sum += Math.abs(Number(entrie.value))
             }
         })
         return sum
     }
 
+    let total = totalInflow() - totalOutflow()
+
     return (
         <div>
             <span>{totalInflow()}</span>
-            <span>{totalOutflow()}</span>
+            <span className="border pl-[1rem]">{totalOutflow()}</span>
+            <span> = {totalInflow() - totalOutflow()}</span>
         </div>
     )
 

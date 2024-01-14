@@ -6,7 +6,8 @@ const Form = ({onNewEntry}) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        const newEntry = {...formData, id: Date.now() }
+        const value = formData.category !== 'Income' ? -Math.abs(formData.value) : Number(formData.value);
+        const newEntry = {...formData, value, id: Date.now() }
         onNewEntry(newEntry)
         localStorage.setItem('entries', JSON.stringify([...JSON.parse(localStorage.getItem('entries') || '[]'), newEntry]))
         setFormData({ category: '', description: '', value: ''})
