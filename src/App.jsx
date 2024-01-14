@@ -3,7 +3,9 @@ import './App.css'
 import InputBox from './component/Home'
 
 function App() {
-    <InputBox />
+    return (
+        <InputBox />
+    )
 
 }
 

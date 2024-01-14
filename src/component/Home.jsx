@@ -1,16 +1,39 @@
-import { useState } from 'react'
-import React from 'react'
-import Form from './Form'
+import React, { useState, useEffect } from 'react';
+import Form from './Form';
+import InflowOutflow from './inflowoutflow';
 
 const InputBox = () => {
+    const [entries, setEntries] = useState([]);
+
+    useEffect(() => {
+        const storedEntries = JSON.parse(localStorage.getItem('entries') || '[]');
+        setEntries(storedEntries);
+    }, []);
+
+    const handleNewEntry = (newEntry) => {
+        setEntries([...entries, newEntry]);
+    };
+
     return (
-        <div>
+        <div className='border'>
+            <div className='flex justify-between text-center p-4'>
+                <span className='flex-1'>Category</span>
+                <span className='flex-1'>Description</span>
+                <span className='flex-1'>Amount</span>
+            </div>
             <ul>
-                {/*<--- Everytime I input inside of the form Goes here--->*/}
+                {entries.map(entry => (
+                    <li key={entry.id} className='flex justify-between text-center p-2 border-t'>
+                        <span className='flex-1'>{entry.category}</span>
+                        <span className='flex-1'>{entry.description}</span>
+                        <span className='flex-1'>{entry.value}</span>
+                    </li>
+                ))}
             </ul>
-            <Form />
+            <Form onNewEntry={handleNewEntry} />
+            <InflowOutflow />
         </div>
-    )
-}
+    );
+};
 
 export default InputBox;
