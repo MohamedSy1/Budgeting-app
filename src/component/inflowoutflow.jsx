@@ -32,13 +32,20 @@ const InflowOutflow = () => {
         return sum
     }
 
-    let total = totalInflow() - totalOutflow()
-
     return (
         <div>
-            <span>{totalInflow()}</span>
-            <span className="border pl-[1rem]">{totalOutflow()}</span>
-            <span> = {totalInflow() - totalOutflow()}</span>
+            <div className='flex text-center pt-4'>
+                <span className='flex-1 mr-[0.1rem] ml-[0.5rem] bg-gray-50 border border-gray-300 text-[green] font-extrabold text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'>{totalInflow()}</span>
+                <span>-</span>
+                <span className="border pl-[1rem] flex-1 mr-[0.1rem] ml-[0.5rem] bg-gray-50 border border-gray-300 text-[red] font-extrabold text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">{totalOutflow()}</span>
+                <span>=</span>
+                <span className='flex-1 flex-1 mr-[0.1rem] ml-[0.5rem] bg-gray-50 border border-gray-300 text-[green] font-extrabold text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'>{Number(totalInflow()) - Number(totalOutflow())}</span>
+            </div>
+            <div className='flex text-center pt-4 '>
+                <span className='flex-1 '>Total Inflow</span>
+                <span className='flex-1 '>Total Outflow</span>
+                <span className='flex-1'>Working Balance</span>
+            </div>
         </div>
     )
 

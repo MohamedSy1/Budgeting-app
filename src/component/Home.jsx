@@ -17,9 +17,9 @@ const InputBox = () => {
     return (
         <div className='border'>
             <div className='flex justify-between text-center p-4'>
-                <span className='flex-1'>Category</span>
-                <span className='flex-1'>Description</span>
-                <span className='flex-1'>Amount</span>
+                <span className='flex-1 font-extrabold'>Category</span>
+                <span className='flex-1 font-extrabold'>Description</span>
+                <span className='flex-1 font-extrabold'>Amount</span>
             </div>
             <ul>
                 {entries.map(entry => (
