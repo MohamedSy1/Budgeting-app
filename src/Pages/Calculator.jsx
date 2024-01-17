@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Form from './Form';
-import InflowOutflow from './inflowoutflow';
+import Form from '../component/Form';
+import InflowOutflow from '../component/inflowoutflow';
 
 const InputBox = () => {
     const [entries, setEntries] = useState([]);
