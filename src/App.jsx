@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import InputBox from './component/Home'
+import InputBox from './Pages/Calculator.jsx'
 
 function App() {
     return (
