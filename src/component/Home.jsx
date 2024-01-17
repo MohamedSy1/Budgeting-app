@@ -16,7 +16,7 @@ const InputBox = () => {
 
     return (
         <div className='border'>
-            <div className='flex justify-between text-center p-4'>
+            <div className='flex justify-between text-center p-4 bg-gray-50 border border-gray-300'>
                 <span className='flex-1 font-extrabold'>Category</span>
                 <span className='flex-1 font-extrabold'>Description</span>
                 <span className='flex-1 font-extrabold'>Amount</span>
