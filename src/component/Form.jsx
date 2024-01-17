@@ -3,7 +3,6 @@ import React, {useState} from 'react'
 // I have to add all the vlaue that are not outflow into the outflow object
 // I Have to add all the values that are inflow into the inflow 
 const Form = ({onNewEntry}) => {
-
     const [formData, setFormData] = useState({ category: '', description: '', value: ''})
     
     const handleSubmit = (event) => {
