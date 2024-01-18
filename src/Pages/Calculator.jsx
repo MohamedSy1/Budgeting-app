@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Form from '../component/Form';
 
 import NavBar from '../component/navbar';
-const InputBox = () => {
+const Calculator = () => {
     const [entries, setEntries] = useState([]);
 
     useEffect(() => {
@@ -35,4 +35,4 @@ const InputBox = () => {
     );
 }
 
-export default InputBox;
+export default Calculator;

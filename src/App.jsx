@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './index.css'
-import InputBox from './Pages/Calculator.jsx'
+import Calculator from './Pages/Calculator.jsx'
+import results from './Pages/Results.jsx';
 import {
     BrowserRouter,
     Routes,
@@ -14,9 +15,9 @@ function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<InputBox />}/>
-                <Route path="/pages" element={<InputBox />} />
-                {/* <Route path='/pages' element={< />} /> */}
+                <Route path="./pages/Calculator.jsx" element={<Calculator/>}/>
+                <Route path="./pages/Home.jsx" element={<Home/>} />
+                <Route path="./pages/Results.jsx" element={<results/>} />
             </Routes>
         </BrowserRouter>
 
