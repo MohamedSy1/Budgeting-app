@@ -1,12 +1,26 @@
 import { useState } from 'react'
-import './App.css'
+import './index.css'
 import InputBox from './Pages/Calculator.jsx'
+import {
+    BrowserRouter,
+    Routes,
+    Route,
+    Navigate,
+    RouterProvider,
+    createBrowserRouter,
+  } from "react-router-dom";
 
 function App() {
     return (
-        <InputBox />
-    )
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<InputBox />}/>
+                <Route path="/pages" element={<InputBox />} />
+                {/* <Route path='/pages' element={< />} /> */}
+            </Routes>
+        </BrowserRouter>
 
+    )
 }
 
 export default App
