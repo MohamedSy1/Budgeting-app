@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
 const Navbar = () => {
     return (
         <header className="w-full top-0">
