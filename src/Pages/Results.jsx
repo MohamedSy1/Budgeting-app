@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import navbar from '../component/navbar';
 import Form from '../component/Form';
 
+navbar()
 
-const balanceList = () =>{
+const results = () =>{
     const [entries, setEntries] = useState([]);
 
     useEffect(() => {
@@ -24,3 +26,5 @@ const balanceList = () =>{
         </div>
     )
 };
+
+export default results;

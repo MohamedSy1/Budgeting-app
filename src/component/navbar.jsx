@@ -9,14 +9,13 @@ const Navbar = () => {
                 <img className="w-[15rem]" src="#" alt="Budget-logo" />
                 <ul className="flex flex-row gap-[2rem]">
                    <li>
-                    <Link></Link>
                        <a href="../App.jsx" className="hover:text-blue-500 hover:underline">Home</a>
                    </li>
                    <li>
-                        <Link to="/pages" className="hover:text-blue-500 hover:underline">Calculator</Link>
+                        <Link to="../Pages/Calculator.jsx" className="hover:text-blue-500 hover:underline">Calculator</Link>
                    </li>
                    <li>
-                       <a href="" className="hover:text-blue-500 hover:underline">Contact</a>
+                       <a href="../Pages/Results" className="hover:text-blue-500 hover:underline">Results</a>
                    </li>
                 </ul>
             </div>
